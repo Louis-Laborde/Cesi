@@ -68,5 +68,5 @@ jobs:
                 password: ${{ secrets.PROD_PASS }}
 
                 script: |
-                  docker pull senseo/ratatouf:latest
+                  docker pull louislaborde/cesiprod:latest
                   docker-compose up -d
