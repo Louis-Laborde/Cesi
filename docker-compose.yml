@@ -11,6 +11,7 @@ services:
       MARIADB_DATABASE: cesi
       MARIADB_USER: roger
       MARIADB_PASSWORD: regor
+    profiles: [local, dev, prod]
 
   cesi_api:
     container_name: ctn_cesi_api
@@ -22,9 +23,11 @@ services:
       BDD_HOST: cesi_bdd
     ports:
       - 23000:15000
+    profiles: [dev, prod]
 
   adminer:
     container_name: ctn_cesi_adminer
     image: adminer
     ports:
       - 3307:8080
+    profiles: [dev]
