@@ -22,9 +22,11 @@ services:
       BDD_HOST: cesi_bdd
     ports:
       - 23000:15000
+    profiles: [dev, prod]
 
   adminer:
     container_name: ctn_cesi_adminer
     image: adminer
     ports:
       - 3307:8080
+    profiles: [dev]
